@@ -5,7 +5,8 @@ USERNAME=os.environ.get("INSTAGRAM_USERNAME")
 PASSWORD=os.environ.get("PASSWORD")
 cl = Client()
 cl.login(USERNAME, PASSWORD)
-url = 'https://www.instagram.com/p/CX37ituIcyr/?igsh=OHBnN2ptYWxoOXQw'
+url = 'https://www.instagram.com/p/CTrE92YlU8E/?igsh=MWc5MHd5dzV1bzZzcw=='
+
 media_pk = cl.media_pk_from_url(url)
 
 media_path = cl.video_download(media_pk)
