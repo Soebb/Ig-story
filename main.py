@@ -5,16 +5,16 @@ USERNAME=os.environ.get("INSTAGRAM_USERNAME")
 PASSWORD=os.environ.get("PASSWORD")
 cl = Client()
 cl.login(USERNAME, PASSWORD)
-url = '
+url = 'https://www.instagram.com/p/CX37ituIcyr/?igsh=OHBnN2ptYWxoOXQw'
 media_pk = cl.media_pk_from_url(url)
 
 media_path = cl.video_download(media_pk)
-example = cl.user_info_by_username('example')
+example = cl.user_info_by_username('san_a_01')
 #hashtag = cl.hashtag_info('dhbastards')
 
 cl.video_upload_to_story(
     media_path,
-    "Credits @example",
+    #"Credits @example",
     mentions=[StoryMention(user=example)],
     #mentions=[StoryMention(user=example, x=0.49892962, y=0.703125, width=0.8333333333333334, height=0.125)],
     #links=[StoryLink(webUri='https://github.com/subzeroid/instagrapi')],
